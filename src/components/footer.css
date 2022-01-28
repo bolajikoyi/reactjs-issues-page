@@ -1,0 +1,35 @@
+.Footer-container {
+    width: 85%;
+    height: 80px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+  }
+  .Footer-container span {
+      display: flex;
+      align-items: center;
+  }
+
+  .footer.fa-github {
+      color: gray;
+      font-size: 25px;
+      padding-right: 5px;
+      cursor: pointer;
+  }
+  .Footer-copyright {
+    opacity: 0.9;
+    font-size: 14px;
+  }
+  .Footer-links {
+      display: flex;
+  }
+  .Footer-links span {
+      padding: 0 17px;
+      font-size: 14px;
+      color: blue;
+      cursor: pointer;
+  }
+  .Footer-links span:hover {
+      text-decoration: underline;
+  }

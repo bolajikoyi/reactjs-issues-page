@@ -1,0 +1,27 @@
+.IssueHeader {
+    width: 85%;
+    margin: 0 auto;
+}
+.IssueHeader .header {
+    display: grid;
+    grid-template-columns: 8% 44% repeat(6, 8%);
+    grid-column-gap: 5px;
+    padding: 15px 10px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 10px 10px 0 0;
+    background-color: #f6f8fa;
+}
+.IssueHeader .header span {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.closed .fa-check,
+.open .fa-dot-circle {
+    opacity: 0.6
+}
+.active {
+    font-weight: bold;
+    opacity: 1;
+}

@@ -1,0 +1,35 @@
+
+.issues-body {
+    width: 85%;
+    margin: 0 auto;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+
+.issues-list {
+    display: grid;
+    grid-template-columns: 2% 50% repeat(6, 8%);
+    grid-column-gap: 5px;
+}
+.issues-list .title {
+    font-weight: 600;
+}
+
+.issues-list .fa-check-circle {
+    color: blue;
+}
+.additional-info {
+    padding-left: calc(2% + 5px);
+    font-size: 12px;
+    padding-top: 5px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: underline;
+}
