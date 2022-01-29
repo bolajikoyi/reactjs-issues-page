@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import {GET_ISSUES} from './graphQL/query'
 import { ApolloClient } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import { HttpLink } from 'apollo-link-http';
@@ -26,7 +25,6 @@ const client = new ApolloClient({
   link: httpLink,
   cache,
 });
-
 
 
 ReactDOM.render(

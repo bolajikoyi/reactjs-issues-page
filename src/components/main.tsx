@@ -8,7 +8,7 @@ import {GET_ISSUES} from '../graphQL/query';
 import Loading from './loading';
 import IssueHeader from './issueHeader';
 import Pagination from './pagination';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const Main = (prop: any) => {
@@ -31,7 +31,7 @@ const Main = (prop: any) => {
     console.log(cursor)
 
 return(
-    <Query query={GET_ISSUES}  variables={{ number:20, state: state, cursor: cursor}}>
+    <Query query={GET_ISSUES}  variables={{ number:30, state: state, cursor: cursor}}>
         {({data, loading}: {data:any, loading:boolean})=>{
             if(loading || !data){
                 return <Loading/>
@@ -56,7 +56,7 @@ return(
                     <SubHeader count = {totalCount}/>
                     <TopMessage/>
                     <IssueHeader data = {issueHeaderData} />
-                    {repository.issues.edges.map((val: any, index: number) => <IssueList key={index} {...val}/>)}
+                    {repository.issues.edges.map((val: any, index: number) => <IssueList key={index} {...val} />)}
                     <Pagination action = {paginationProp}/>
                     <Footer/>
                 </div>

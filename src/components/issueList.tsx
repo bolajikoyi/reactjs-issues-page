@@ -2,18 +2,17 @@ import './issueList.css';
 import Loading from './loading';
 
 const IssueList = (prop) => {
-    // console.log(prop)
+    console.log(prop.node.closed)
     if(!prop){
         return <Loading/>
     }
-    // if(prop.node.title){
-        
-    // }
+    
+
     return (
         <div>{prop.node?.title? 
             <div className='issues-body'>
                 <div className='issues-list'>
-                    <span><i className="far fa-check-circle"></i></span>
+                    <span><i className={!prop.node.closed? "far fa-dot-circle":"far fa-check-circle"}></i></span>
                     <span className='title'><a href={prop.node?.url} target={'_blank'} rel="noreferrer">{prop.node?.title}</a></span>
                     <span></span>
                     <span></span>

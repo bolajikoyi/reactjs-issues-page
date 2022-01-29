@@ -18,7 +18,8 @@
     font-weight: 600;
 }
 
-.issues-list .fa-check-circle {
+.issues-list .fa-check-circle,
+.issues-list .fa-dot-circle {
     color: blue;
 }
 .additional-info {
