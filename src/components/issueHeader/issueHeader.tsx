@@ -5,7 +5,6 @@ const IssueHeader = (prop: any) => {
     if(!prop){
         return <Loading/>
     }
-    console.log(prop)
     return (
         <div>
             <div className='IssueHeader'>

@@ -5,7 +5,6 @@ import Loading from '../loading/loading';
 const IssueList = (prop) => {
     const [hoverState, setHoverState] = useState(false)
 
-    console.log(prop)
     if(!prop){
         return <Loading/>
     }

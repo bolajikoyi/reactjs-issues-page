@@ -3,16 +3,14 @@ import request from '../../../src/images/pull-request.png'
 import fork from '../../../src/images/fork.png'
 
 const SubHeader = (prop) => {
-console.log(prop)
-const isClosed = prop.count.isClosed;
 
     return (
         <div className='SubHeader'>
             <div className='SubHeader-top'>
                 <div className='left'>
                     <span><i className="subheader fas fa-clipboard"></i> </span>
-                    <span className='owner'>reactjs </span>/
-                    <span className='repo-name'> reactjs.org</span>
+                    <span className='owner'><a href="https://github.com/reactjs">reactjs</a> </span>/
+                    <span className='repo-name'> <a href="https://github.com/reactjs/reactjs.org">reactjs.org</a></span>
                     <span className='repo-visibility'> Public</span>
                 </div>
                 <div className='right'>

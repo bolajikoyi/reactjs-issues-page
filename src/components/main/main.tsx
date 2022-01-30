@@ -17,17 +17,13 @@ const Main = (prop: any) => {
     const [state, setState] = useState('CLOSED');
 
     const pagination = (cursor: string ) => {
-        console.log(cursor)
         setCursor(cursor)
         
     }
 
     const issueState = (state: string) => {
         setState(state)
-        console.log(state)
     }
-
-    console.log(cursor)
 
 return(
     <Query query={GET_ISSUES}  variables={{ number:30, state: state, cursor: cursor}}>
@@ -51,8 +47,7 @@ return(
                 totalCount,
                 isClosed
             }
-            console.log(isClosed)
-            console.log(repository)
+
             return (
                 <div>
                     <Header/>
