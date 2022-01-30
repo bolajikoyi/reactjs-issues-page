@@ -6,6 +6,8 @@ The parts marked in read are clickable. You can filter the issues by clicking ei
 Clicking on any issue topic takes you to the issue page, and clicking on the name of the author, takes you to their profile.
 Previous and Next buttons are used to see the previous issues page or the next issues page respectively.
 
+The live implementation can be found here http://reactjs-issues.s3-website.us-east-2.amazonaws.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
