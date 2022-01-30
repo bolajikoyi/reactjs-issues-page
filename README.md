@@ -2,7 +2,7 @@
 
 ![alt text](src/images/usage-guide.jpg "Usage guide")
 
-The parts marked in read are clickable. You can filter the issues by clicking either 'open' or 'closed' to see the opened or closed issues respectively.
+The parts marked in red are clickable. You can filter the issues by clicking either 'open' or 'closed' to see the opened or closed issues respectively.
 Clicking on any issue topic takes you to the issue page, and clicking on the name of the author, takes you to their profile.
 Previous and Next buttons are used to see the previous issues page or the next issues page respectively.
 
