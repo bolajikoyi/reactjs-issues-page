@@ -1,8 +1,11 @@
+import React, {useEffect, useState, } from 'react';
 import './issueList.css';
-import Loading from './loading';
+import Loading from '../loading/loading';
 
 const IssueList = (prop) => {
-    console.log(prop.node.closed)
+    const [hoverState, setHoverState] = useState(false)
+
+    console.log(prop)
     if(!prop){
         return <Loading/>
     }
@@ -10,7 +13,7 @@ const IssueList = (prop) => {
 
     return (
         <div>{prop.node?.title? 
-            <div className='issues-body'>
+            <div className={hoverState? 'issues-body hover' : 'issues-body'} onMouseEnter={()=>setHoverState(true)} onMouseLeave={()=>setHoverState(false)}>
                 <div className='issues-list'>
                     <span><i className={!prop.node.closed? "far fa-dot-circle":"far fa-check-circle"}></i></span>
                     <span className='title'><a href={prop.node?.url} target={'_blank'} rel="noreferrer">{prop.node?.title}</a></span>

@@ -3,6 +3,7 @@ import './footer.css'
 const Footer = () => {
 return(
     <div>
+        <div className='vertical-line'></div>
         <div className="Footer-container">
         <span>
             <i className="footer fab fa-github"></i> 

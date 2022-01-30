@@ -8,6 +8,9 @@
     box-sizing: border-box;
     padding: 10px 10px;
 }
+.issues-body.hover{
+    background-color: #f6f8fa;
+}
 
 .issues-list {
     display: grid;
@@ -18,9 +21,11 @@
     font-weight: 600;
 }
 
-.issues-list .fa-check-circle,
+.issues-list .fa-check-circle{
+    color: #bfa5dd;
+}
 .issues-list .fa-dot-circle {
-    color: blue;
+    color: #75ba75;
 }
 .additional-info {
     padding-left: calc(2% + 5px);

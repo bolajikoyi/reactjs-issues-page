@@ -1,0 +1,41 @@
+.Footer-container {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+  }
+.Footer-container span {
+    display: flex;
+    align-items: center;
+}
+
+.footer.fa-github {
+    color: gray;
+    font-size: 25px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.Footer-copyright {
+opacity: 0.9;
+font-size: 14px;
+}
+.Footer-links {
+    display: flex;
+}
+.Footer-links span {
+    padding: 0 17px;
+    font-size: 14px;
+    color: blue;
+    cursor: pointer;
+}
+.Footer-links span:hover {
+    text-decoration: underline;
+}
+.vertical-line {
+    border-top: 1px solid lightgray;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    box-sizing: border-box;
+}

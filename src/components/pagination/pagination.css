@@ -9,10 +9,24 @@
 .next {
     border-radius: 5px;
     padding: 5px 10px;
-    background-color: aquamarine;
     margin: 0 10px;
     cursor: pointer;
     outline: none;
     border: none;
+    background-color: transparent;
     
+}
+
+.previous:hover,
+.next:hover{
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+.fa-greater-than,
+.fa-less-than {
+    font-size: 10px;
+}
+.clicked {
+    background-color: blue;
+    color: white;
 }

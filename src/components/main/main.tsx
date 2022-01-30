@@ -1,13 +1,13 @@
-import Header from "./header";
-import Footer from "./footer";
-import SubHeader from "./subHeader";
-import TopMessage from './topMessage';
-import IssueList from "./issueList";
+import Header from "../header/header";
+import Footer from "../footer/footer";
+import SubHeader from "../subHeader/subHeader";
+import TopMessage from '../topMessage/topMessage';
+import IssueList from "../issueList/issueList";
 import { Query } from 'react-apollo';
-import {GET_ISSUES} from '../graphQL/query';
-import Loading from './loading';
-import IssueHeader from './issueHeader';
-import Pagination from './pagination';
+import {GET_ISSUES} from '../../graphQL/query';
+import Loading from '../loading/loading';
+import IssueHeader from '../issueHeader/issueHeader';
+import Pagination from '../pagination/pagination';
 import { useState } from "react";
 
 
@@ -16,7 +16,6 @@ const Main = (prop: any) => {
     const [cursor, setCursor] = useState(null);
     const [state, setState] = useState('CLOSED');
 
-   
     const pagination = (cursor: string ) => {
         console.log(cursor)
         setCursor(cursor)
@@ -48,12 +47,16 @@ return(
                 pageInfo,
                 pagination
             }
+            let subHeaderProp = {
+                totalCount,
+                isClosed
+            }
             console.log(isClosed)
             console.log(repository)
             return (
                 <div>
                     <Header/>
-                    <SubHeader count = {totalCount}/>
+                    <SubHeader count = {subHeaderProp}/>
                     <TopMessage/>
                     <IssueHeader data = {issueHeaderData} />
                     {repository.issues.edges.map((val: any, index: number) => <IssueList key={index} {...val} />)}

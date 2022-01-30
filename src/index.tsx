@@ -9,6 +9,7 @@ import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 
+
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';
 const cache = new InMemoryCache();
 
@@ -30,9 +31,8 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-    <App />
+      <App />
     </ApolloProvider>
-    
   </React.StrictMode>,
   document.getElementById('root')
 );

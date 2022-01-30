@@ -1,9 +1,10 @@
 import './subHeader.css'
-import request from '../../src/images/pull-request.png'
-import fork from '../../src/images/fork.png'
+import request from '../../../src/images/pull-request.png'
+import fork from '../../../src/images/fork.png'
 
 const SubHeader = (prop) => {
-
+console.log(prop)
+const isClosed = prop.count.isClosed;
 
     return (
         <div className='SubHeader'>
@@ -39,7 +40,7 @@ const SubHeader = (prop) => {
                     <span><i className="subheader fas fa-code"></i> Code </span>
                 </div>
                 <div className='issues'>
-                    <span><i className="subheader far fa-dot-circle"></i> Issues <span className='number'>{prop.count}</span></span>
+                    <span><i className={!prop.count.isClosed? 'subheader far fa-dot-circle' : 'far fa-check-circle'}></i> Issues <span className='number'>{prop.count.totalCount}</span></span>
                 </div>
                 <div className='pull-request'>
                     <span><img className='subheader pull-request-icon' src={request} alt='pull request icon'></img> Pull requests <span className='number'>584</span></span>

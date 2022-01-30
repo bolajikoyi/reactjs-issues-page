@@ -1,5 +1,5 @@
 import './issueHeader.css'
-import Loading from './loading'
+import Loading from '../loading/loading'
 
 const IssueHeader = (prop: any) => {
     if(!prop){
