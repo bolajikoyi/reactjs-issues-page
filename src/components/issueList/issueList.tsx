@@ -25,7 +25,7 @@ const IssueList = (prop) => {
                     <span>{prop.node?.comments.totalCount > 0 ? <span><i className="far fa-comment-alt"></i> {prop.node?.comments.totalCount}</span> : null}</span>
                 </div>
                 <div className='additional-info'>
-                    #{prop.node?.number} by <a href={prop.node?.author?.url && 'https://github.com/reactjs/reactjs.org/issues'} target={'_blank'} rel="noreferrer">{(prop.node?.author?.name)?? 'User'}</a> was updated on {prop.node?.updatedAt.split('T')[0].split('-').reverse().join('-')} at {prop.node?.updatedAt.split('T')[1].slice(0, 8)}.
+                    #{prop.node?.number} by <a href={prop.node?.author?.url? prop.node?.author?.url : 'https://github.com/reactjs/reactjs.org/issues'} target={'_blank'} rel="noreferrer">{(prop.node?.author?.name)?? 'User'}</a> was updated on {prop.node?.updatedAt.split('T')[0].split('-').reverse().join('-')} at {prop.node?.updatedAt.split('T')[1].slice(0, 8)}.
                 </div>
             </div> : null
         
