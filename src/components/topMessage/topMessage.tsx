@@ -4,8 +4,8 @@ const TopMessage = () => {
         <div>
             <div className="TopMessage">
                 <div className='TopMessage-question'>👋 <span>Want to contribute to reactjs/reactjs.org?</span></div>
-                <div>If you have a bug or an idea, read the <span className='TopMessage-link'>contributing guideline </span>before opening an issue.</div>
-                <div>If you're ready to tackle some open issues, <span className='TopMessage-link'>we've collected some good first issues for you.</span></div>
+                <div>If you have a bug or an idea, read the <span className='TopMessage-link'><a href="https://github.com/reactjs/reactjs.org/blob/5f0549c86e7a9c0774e66687d1bc0118a681eb9d/CONTRIBUTING.md">contributing guideline</a> </span>before opening an issue.</div>
+                <div>If you're ready to tackle some open issues, <span className='TopMessage-link'><a href="https://github.com/reactjs/reactjs.org/contribute">we've collected some good first issues for you.</a></span></div>
                 <div className='TopMessage-dismiss'>Dismiss <i className="fas fa-caret-down"></i></div>
             </div>
             <div className='pinned-issues'>
