@@ -19,7 +19,7 @@ return(
             <span>Pricing</span>
             <span>API</span>
             <span>Training</span>
-            <span>Blog</span>
+            <span className='blog'>Blog</span>
             <span>About</span>
         </div>
     </div>

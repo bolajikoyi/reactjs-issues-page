@@ -5,6 +5,10 @@ import ReactDOM from 'react-dom';
 import Pagination from './pagination';
 
 
-test('Expect componet to be created', () => {
-    expect(Pagination).toBeTruthy()
-});
+describe('Pagination Component', ()=>{
+
+    test('Expect component to be created', async () => {
+        expect(Pagination).toBeTruthy()
+    });
+})
+

@@ -7,7 +7,6 @@ interface _IssueHeaderData {
 }
 
 const IssueHeader = (prop: _IssueHeaderData) => {
-    console.log(prop)
     if(!prop){
         return <Loading/>
     }

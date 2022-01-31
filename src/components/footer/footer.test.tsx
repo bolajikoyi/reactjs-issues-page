@@ -1,13 +1,42 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import ReactDOM from 'react-dom';
 import Footer from './footer';
 
-test('Expect componet to be created', () => {
-    expect(Footer).toBeTruthy()
-});
+afterEach(cleanup)
 
-test('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Footer />, div);
-});
+describe('Footer Component', ()=>{
+    test('expect component to be created', () => {
+        expect(Footer).toBeTruthy()
+    });
+    
+    test('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<Footer />, div);
+    });
+    
+    // test("Should Render", async () => {
+    //     const { asFragment } = render(<Footer />);
+    //     const html = asFragment();
+    //     expect(html).toMatchSnapshot();
+    //   });
+
+    test("Should Contain Text 'Blog'", async () => {
+        render(<Footer />);
+        screen.getByText('Blog');
+    });
+
+    test("Should Contain span tag for Blog text", async () => {
+        render(<Footer />);
+        expect(screen.getByText("Blog").tagName).toBe("SPAN");
+    });
+
+    test("Should Contain ClassName", async () => {
+        render(<Footer />);
+        expect(screen.getByText("Blog").className).toBe(
+          "blog"
+        );  
+      });
+
+})
+
