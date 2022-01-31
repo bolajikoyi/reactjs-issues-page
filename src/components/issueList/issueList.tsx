@@ -6,7 +6,6 @@ import { issueList } from '../../model/model';
 
 const IssueList = (prop: issueList) => {
     const [hoverState, setHoverState] = useState(false)
-    console.log(prop)
 
     if(!prop){
         return <Loading/>
