@@ -9,9 +9,10 @@ import Loading from '../loading/loading';
 import IssueHeader from '../issueHeader/issueHeader';
 import Pagination from '../pagination/pagination';
 import { useState } from "react";
+import {IssueHeaderData, PaginationProp, SubHeaderProp} from '../../model/model'
 
 
-const Main = (prop: any) => {
+const Main = (prop) => {
 
     const [cursor, setCursor] = useState(null);
     const [state, setState] = useState('CLOSED');
@@ -34,16 +35,17 @@ return(
             const {repository} = data;
             const {pageInfo, totalCount} = repository.issues;
             const isClosed = repository.issues.edges[0]?.node.closed;
-            let issueHeaderData = {
+            // console.log(typeof totalCount)
+            let issueHeaderData: IssueHeaderData = {
                 isClosed,
                 totalCount,
                 issueState
             }
-            let paginationProp = {
+            let paginationProp: PaginationProp = {
                 pageInfo,
                 pagination
             }
-            let subHeaderProp = {
+            let subHeaderProp: SubHeaderProp = {
                 totalCount,
                 isClosed
             }

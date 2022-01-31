@@ -1,8 +1,13 @@
-import './subHeader.css'
-import request from '../../../src/images/pull-request.png'
-import fork from '../../../src/images/fork.png'
+import './subHeader.css';
+import request from '../../../src/images/pull-request.png';
+import fork from '../../../src/images/fork.png';
+import { SubHeaderProp } from '../../model/model';
 
-const SubHeader = (prop) => {
+interface _SubHeaderProp {
+    count: SubHeaderProp
+}
+
+const SubHeader = (prop: _SubHeaderProp) => {
 
     return (
         <div className='SubHeader'>

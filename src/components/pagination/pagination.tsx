@@ -1,6 +1,11 @@
 import './pagination.css';
+import { PaginationProp } from '../../model/model';
 
-const Pagination = (prop)=> {
+interface _PaginationProp {
+    action: PaginationProp
+}
+
+const Pagination = (prop: _PaginationProp)=> {
 
     return(
         <div className='pagination-buttons'>

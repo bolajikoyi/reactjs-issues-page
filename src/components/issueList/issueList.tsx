@@ -1,9 +1,12 @@
 import React, {useEffect, useState, } from 'react';
 import './issueList.css';
 import Loading from '../loading/loading';
+import { issueList } from '../../model/model';
 
-const IssueList = (prop) => {
+
+const IssueList = (prop: issueList) => {
     const [hoverState, setHoverState] = useState(false)
+    console.log(prop)
 
     if(!prop){
         return <Loading/>

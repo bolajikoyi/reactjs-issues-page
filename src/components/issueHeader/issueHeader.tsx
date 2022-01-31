@@ -1,7 +1,13 @@
-import './issueHeader.css'
-import Loading from '../loading/loading'
+import './issueHeader.css';
+import Loading from '../loading/loading';
+import { IssueHeaderData } from '../../model/model';
 
-const IssueHeader = (prop: any) => {
+interface _IssueHeaderData {
+    data: IssueHeaderData
+}
+
+const IssueHeader = (prop: _IssueHeaderData) => {
+    console.log(prop)
     if(!prop){
         return <Loading/>
     }
