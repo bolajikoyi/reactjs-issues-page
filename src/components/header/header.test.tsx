@@ -1,8 +1,9 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import ReactDOM from 'react-dom';
 import Header from './header';
 
+afterEach(cleanup);
 
 describe('Header Component', ()=>{
     test('Expect componet to be created', () => {
