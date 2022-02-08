@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component matches snapshot 1`] = `
+<div>
+  <div
+    className="Header"
+  >
+    <div
+      className="Header-left"
+    >
+      <i
+        className="header fab fa-github fa-2x"
+      />
+      <div
+        className="Header-search"
+      >
+        <span>
+          Search or jump to...
+        </span>
+        <div
+          className="Header-search-button"
+        >
+          /
+        </div>
+      </div>
+      <div>
+        <span>
+          Pull requests
+        </span>
+        <span>
+          Issues
+        </span>
+        <span>
+          Marketplace
+        </span>
+        <span>
+          Explore
+        </span>
+      </div>
+    </div>
+    <div
+      className="Header-right"
+    >
+      <i
+        className="header far fa-bell"
+      />
+      <span>
+        + 
+        <i
+          className="header fas fa-caret-down"
+        />
+      </span>
+      <span>
+        <i
+          className="header fas fa-user"
+        />
+         
+        <i
+          className="header fas fa-caret-down"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;

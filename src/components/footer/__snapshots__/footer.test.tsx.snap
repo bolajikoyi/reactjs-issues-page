@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component matches snapshot 1`] = `
+<div>
+  <div
+    className="vertical-line"
+  />
+  <div
+    className="Footer-container"
+  >
+    <span>
+      <i
+        className="footer fab fa-github"
+      />
+      <span
+        className="Footer-copyright"
+      >
+        © 
+        2022
+         Github, Inc.
+      </span>
+    </span>
+    <div
+      className="Footer-links"
+    >
+      <span>
+        Terms
+      </span>
+      <span>
+        Privacy
+      </span>
+      <span>
+        Security
+      </span>
+      <span>
+        Status
+      </span>
+      <span>
+        Docs
+      </span>
+      <span>
+        Contact GitHub
+      </span>
+      <span>
+        Pricing
+      </span>
+      <span>
+        API
+      </span>
+      <span>
+        Training
+      </span>
+      <span
+        className="blog"
+      >
+        Blog
+      </span>
+      <span>
+        About
+      </span>
+    </div>
+  </div>
+</div>
+`;

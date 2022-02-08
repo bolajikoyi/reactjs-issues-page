@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination Component matches snapshot 1`] = `
+<div
+  className="pagination-buttons"
+>
+  <button
+    className="previous"
+    data-testid="previous"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <i
+      className="fas fa-less-than"
+    />
+     Previous
+  </button>
+  <button
+    className="next"
+    data-testid="next"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Next 
+    <i
+      className="fas fa-greater-than"
+    />
+  </button>
+</div>
+`;

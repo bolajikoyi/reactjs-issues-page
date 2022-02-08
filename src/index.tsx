@@ -10,8 +10,10 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 
 
+
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';
 const cache = new InMemoryCache();
+
 
 const httpLink = new HttpLink({
   uri: GITHUB_BASE_URL,
@@ -25,6 +27,7 @@ const httpLink = new HttpLink({
 const client = new ApolloClient({
   link: httpLink,
   cache,
+
 });
 
 

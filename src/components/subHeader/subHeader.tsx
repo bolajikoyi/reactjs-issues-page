@@ -40,22 +40,22 @@ const SubHeader = (prop: _SubHeaderProp) => {
             </div>
             <div className='SubHeader-bottom'>
                 <div className='code'>
-                    <span><i className="subheader fas fa-code"></i> Code </span>
+                    <span data-testid='code'><i className="subheader fas fa-code"></i> Code </span>
                 </div>
                 <div className='issues'>
-                    <span><i className={!prop.count.isClosed? 'subheader far fa-dot-circle' : 'far fa-check-circle'}></i> Issues <span className='number'>{prop.count.totalCount}</span></span>
+                    <span data-testid='issues'><i className={!prop.count.isClosed? 'subheader far fa-dot-circle' : 'far fa-check-circle'}></i> Issues <span className='number'>{prop.count.totalCount}</span></span>
                 </div>
                 <div className='pull-request'>
-                    <span><img className='subheader pull-request-icon' src={request} alt='pull request icon'></img> Pull requests <span className='number'>584</span></span>
+                    <span data-testid='pull-requests'><img className='subheader pull-request-icon' src={request} alt='pull request icon'></img> Pull requests <span className='number'>584</span></span>
                 </div>
                 <div className='actions'>
-                    <span><i className="subheader far fa-play-circle"></i> Actions</span>
+                    <span data-testid='actions'><i className="subheader far fa-play-circle"></i> Actions</span>
                 </div>
                 <div className='security'>
-                    <span><i className="subheader fas fa-shield-alt"></i> Security</span>
+                    <span data-testid='security'><i className="subheader fas fa-shield-alt"></i> Security</span>
                 </div>
                 <div className='insight'>
-                    <span><i className="subheader fas fa-chart-line"></i> Insights</span>
+                    <span data-testid='insights'><i className="subheader fas fa-chart-line"></i> Insights</span>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
 import ReactDOM from 'react-dom';
+import '@testing-library/jest-dom/extend-expect';
+import renderer from 'react-test-renderer';
 import Footer from './footer';
 
 afterEach(cleanup)
@@ -15,12 +17,6 @@ describe('Footer Component', ()=>{
         ReactDOM.render(<Footer />, div);
     });
     
-    // test("Should Render", async () => {
-    //     const { asFragment } = render(<Footer />);
-    //     const html = asFragment();
-    //     expect(html).toMatchSnapshot();
-    //   });
-
     test("Should Contain Text 'Blog'", async () => {
         render(<Footer />);
         screen.getByText('Blog');
@@ -37,6 +33,11 @@ describe('Footer Component', ()=>{
           "blog"
         );  
       });
+
+    test('matches snapshot', ()=> {
+        const tree = renderer.create(<Footer/>).toJSON();
+        expect(tree).toMatchSnapshot();
+    })
 
 })
 

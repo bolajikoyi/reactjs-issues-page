@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssueHeader Component matches snapshot 1`] = `
+<div>
+  <div
+    className="IssueHeader"
+  >
+    <div
+      className="header"
+    >
+      <span
+        className="open"
+        onClick={[Function]}
+      >
+        <i
+          className="far fa-dot-circle"
+        />
+         
+        492 Open
+      </span>
+      <span
+        className="closed active"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-check"
+        />
+         
+        20 Closed
+      </span>
+      <span
+        className="author"
+        data-testid="author"
+      >
+        Author 
+        <i
+          className="fas fa-caret-down"
+        />
+      </span>
+      <span
+        className="label"
+      >
+        Label 
+        <i
+          className="fas fa-caret-down"
+        />
+      </span>
+      <span
+        className="projects"
+      >
+        Projects 
+        <i
+          className="fas fa-caret-down"
+        />
+      </span>
+      <span
+        className="milestones"
+      >
+        Milestones 
+        <i
+          className="fas fa-caret-down"
+        />
+      </span>
+      <span
+        className="assignee"
+      >
+        Assignee 
+        <i
+          className="fas fa-caret-down"
+        />
+      </span>
+      <span
+        className="sort"
+      >
+        Sort 
+        <i
+          className="fas fa-caret-down"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;

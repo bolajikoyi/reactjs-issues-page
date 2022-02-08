@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
 import ReactDOM from 'react-dom';
+import '@testing-library/jest-dom/extend-expect';
+import renderer from 'react-test-renderer';
 import IssueList from './issueList';
 
 afterEach(cleanup);
@@ -14,4 +16,9 @@ describe('IssueList Component', ()=> {
         const div = document.createElement('div');
         ReactDOM.render(<IssueList />, div);
     });
+
+    test('matches snapshot', ()=> {
+        const tree = renderer.create(<IssueList/>).toJSON();
+        expect(tree).toMatchSnapshot();
+    })
 })

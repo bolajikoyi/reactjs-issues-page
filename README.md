@@ -8,6 +8,10 @@ Previous and Next buttons are used to see the previous issues page or the next i
 
 The live implementation can be found here http://reactjs-issues.s3-website.us-east-2.amazonaws.com/
 
+To use this application, you need to create a .env file in the root folder of the app and populative with your GitHub access token. A sample is shown below
+
+REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN = ghp_kDveXiCNpWNcU5ojoGQDqpAsxxxxxxxxxxxx
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
 import ReactDOM from 'react-dom';
+import '@testing-library/jest-dom/extend-expect';
+import renderer from 'react-test-renderer';
 import Header from './header';
 
 afterEach(cleanup);
@@ -31,6 +33,10 @@ describe('Header Component', ()=>{
           "Header-search-button"
         );  
       });
-
+      
+    test('matches snapshot', ()=>{
+        const tree = renderer.create(<Header/>).toJSON();
+        expect(tree).toMatchSnapshot();
+    })
 })
 
