@@ -17,12 +17,12 @@ describe('Header Component', ()=>{
         ReactDOM.render(<Header />, div);
     });
 
-    test("Should Contain Text 'Search or jump to...'", async () => {
+    test("Should Contain Text 'Search or jump to...'", () => {
         render(<Header />);
         screen.getByText('Search or jump to...');
     });
 
-    test("Should Contain span tag for 'Search or jump to...' text", async () => {
+    test("Should Contain span tag for 'Search or jump to...' text", () => {
         render(<Header />);
         expect(screen.getByText("Search or jump to...").tagName).toBe("SPAN");
     });

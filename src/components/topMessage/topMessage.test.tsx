@@ -42,5 +42,6 @@ describe('TopMessage Component', ()=> {
         const tree = renderer.create(<TopMessage />).toJSON();
         expect(tree).toMatchSnapshot();
     })
+
 })
 

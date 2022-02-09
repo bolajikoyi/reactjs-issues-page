@@ -17,24 +17,24 @@ describe('Footer Component', ()=>{
         ReactDOM.render(<Footer />, div);
     });
     
-    test("Should Contain Text 'Blog'", async () => {
+    test("Should Contain Text 'Blog'", () => {
         render(<Footer />);
         screen.getByText('Blog');
     });
 
-    test("Should Contain span tag for Blog text", async () => {
+    test("Should Contain span tag for Blog text", () => {
         render(<Footer />);
         expect(screen.getByText("Blog").tagName).toBe("SPAN");
     });
 
-    test("Should Contain ClassName", async () => {
+    test("Should Contain className 'blog'", () => {
         render(<Footer />);
         expect(screen.getByText("Blog").className).toBe(
           "blog"
         );  
       });
 
-    test('matches snapshot', ()=> {
+    test('matches snapshot', () => {
         const tree = renderer.create(<Footer/>).toJSON();
         expect(tree).toMatchSnapshot();
     })
