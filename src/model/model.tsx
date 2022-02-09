@@ -1,37 +1,37 @@
 export interface IssueHeaderData {
-    isClosed: Boolean,
-    totalCount: Number,
+    isClosed: boolean,
+    totalCount: number,
     issueState: any
 
 }
 export interface PaginationProp {
     pageInfo: {
-        endCursor: String,
-        hasNextPage: Boolean,
-        hasPreviousPage: Boolean,
-        startCursor: String
+        endCursor: string,
+        hasNextPage: boolean,
+        hasPreviousPage: boolean,
+        startCursor: string
     },
     pagination: any
 
 }
 export interface SubHeaderProp {
-    totalCount: Number,
-    isClosed: String
+    totalCount: number,
+    isClosed: boolean
 }
 
 export interface issueList {
     node?: {
         author: {
-            name: String,
+            name: string,
             url: string,
         },
-        closed: Boolean,
+        closed: boolean,
         comments: {
-            totalCount: Number
+            totalCount: number
         },
-        number: Number,
-        title: String,
-        updatedAt: String,
+        number: number,
+        title: string,
+        updatedAt: string,
         url: string,
 
     }

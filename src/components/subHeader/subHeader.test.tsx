@@ -9,7 +9,7 @@ afterEach(cleanup);
 
 let data = {
     totalCount: 100,
-    isClosed: 'true'
+    isClosed: true
 }
 
 describe('SubHeader Component', ()=> {
