@@ -36,7 +36,6 @@ return(
             const {pageInfo, totalCount} = repository.issues;
             const isClosed = repository.issues.edges[0]?.node.closed;
 
-            console.log(pageInfo)
             let issueHeaderData: IssueHeaderData = {
                 isClosed,
                 totalCount,

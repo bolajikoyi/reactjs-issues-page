@@ -4,12 +4,13 @@ import ReactDOM from 'react-dom';
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
 import IssueHeader from './issueHeader';
+import userEvent from '@testing-library/user-event';
 
 afterEach(cleanup);
 
 let data = {
     isClosed: true,
-    totalCount: 20,
+    totalCount: 30,
     issueState: jest.fn()
 }
 
@@ -23,12 +24,26 @@ test('renders without crashing', () => {
     ReactDOM.render(<IssueHeader data={data} />, div);
 });
 
-test("Should Contain Text 'Author'", async () => {
+test('function returns open', () => {
+    const click = jest.fn(() => 'OPEN');
+    render(<div data-testid='open' onClick={click}></div>);
+    userEvent.click(screen.getByTestId('open'));
+    expect(click).toBeCalledTimes(1);
+})
+
+test('function returns closed', () => {
+    const click = jest.fn(() => 'CLOSED');
+    render(<div data-testid='closed' onClick={click}></div>);
+    userEvent.click(screen.getByTestId('closed'));
+    expect(click).toBeCalledTimes(1);
+})
+
+test("Should Contain Text 'Author'", () => {
     render(<IssueHeader data={data} />);
     expect(screen.getByTestId('author')).toHaveTextContent('Author');
 });
 
-test("Should not contain the text 'Writer'", async () => {
+test("Should not contain the text 'Writer'", () => {
     render(<IssueHeader data={data} />);
     expect(screen.getByTestId('author')).not.toHaveTextContent('Writer');
 });

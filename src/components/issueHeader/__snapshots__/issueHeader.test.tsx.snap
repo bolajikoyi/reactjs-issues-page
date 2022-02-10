@@ -10,6 +10,7 @@ exports[`IssueHeader Component matches snapshot 1`] = `
     >
       <span
         className="open"
+        data-testid="open"
         onClick={[Function]}
       >
         <i
@@ -20,13 +21,14 @@ exports[`IssueHeader Component matches snapshot 1`] = `
       </span>
       <span
         className="closed active"
+        data-testid="closed"
         onClick={[Function]}
       >
         <i
           className="fas fa-check"
         />
          
-        20 Closed
+        30 Closed
       </span>
       <span
         className="author"
