@@ -14,11 +14,11 @@ describe('IssueList Component', ()=> {
     
     test('renders without crashing', async () => {
         const div = document.createElement('div');
-        ReactDOM.render(<IssueList />, div);
+        ReactDOM.render(<IssueList index={0} />, div);
     });
 
     test('matches snapshot', ()=> {
-        const tree = renderer.create(<IssueList/>).toJSON();
+        const tree = renderer.create(<IssueList index={0}/>).toJSON();
         expect(tree).toMatchSnapshot();
     })
 })

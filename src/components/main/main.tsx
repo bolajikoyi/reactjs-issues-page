@@ -16,6 +16,7 @@ const Main = (prop) => {
 
     const [cursor, setCursor] = useState(null);
     const [state, setState] = useState('CLOSED');
+    // const [state, setState] = useState('CLOSED');
 
     const pagination = (cursor: string ) => {
         setCursor(cursor)
@@ -56,7 +57,7 @@ return(
                     <SubHeader count = {subHeaderProp}/>
                     <TopMessage/>
                     <IssueHeader data = {issueHeaderData} />
-                    {repository.issues.edges.map((val: any, index: number) => <IssueList key={index} {...val} />)}
+                    {repository.issues.edges.map((val: any, index: number) => <IssueList key={index} {...val} index={index} />)}
                     <Pagination action = {paginationProp}/>
                     <Footer/>
                 </div>

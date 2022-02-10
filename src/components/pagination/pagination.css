@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px auto 10px auto; 
+    margin: 30px auto 10px auto;
+    height: 30px;
 }
 .previous,
 .next {
@@ -14,13 +15,13 @@
     outline: none;
     border: none;
     background-color: transparent;
-    
 }
 
 .previous:hover,
 .next:hover{
     border: 1px solid lightgray;
     box-sizing: border-box;
+    height: 26px;
 }
 .fa-greater-than,
 .fa-less-than {

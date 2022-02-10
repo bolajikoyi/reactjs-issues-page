@@ -20,6 +20,7 @@ export interface SubHeaderProp {
 }
 
 export interface issueList {
+    index: number
     node?: {
         author: {
             name: string,

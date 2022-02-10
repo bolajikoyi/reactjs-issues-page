@@ -8,6 +8,11 @@
     box-sizing: border-box;
     padding: 10px 10px;
 }
+
+/* .issues-body:last-child{
+    border-radius: 0 0 10px 10px;
+} */
+
 .issues-body.hover{
     background-color: #f6f8fa;
 }
@@ -16,6 +21,9 @@
     display: grid;
     grid-template-columns: 2% 50% repeat(6, 8%);
     grid-column-gap: 5px;
+}
+.issues-list:last-child {
+    border-radius: 0 0 10px 10px;
 }
 .issues-list .title {
     font-weight: 600;
@@ -38,4 +46,7 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+.fff {
+    border-radius: 0 0 10px 10px;
 }

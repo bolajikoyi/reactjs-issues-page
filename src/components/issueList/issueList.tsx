@@ -7,6 +7,8 @@ import { issueList } from '../../model/model';
 const IssueList = (prop: issueList) => {
     const [hoverState, setHoverState] = useState(false)
 
+    console.log(prop)
+
     if(!prop){
         return <Loading/>
     }
@@ -14,7 +16,7 @@ const IssueList = (prop: issueList) => {
 
     return (
         <div>{prop.node?.title? 
-            <div className={hoverState? 'issues-body hover' : 'issues-body'} onMouseEnter={()=>setHoverState(true)} onMouseLeave={()=>setHoverState(false)}>
+            <div className={!hoverState && prop.index !== 29? 'issues-body' :  hoverState && prop.index !== 29? 'issues-body hover': hoverState && prop.index === 29? 'issues-body hover fff' : !hoverState && prop.index === 29? 'issues-body fff' : ''} onMouseEnter={()=>setHoverState(true)} onMouseLeave={()=>setHoverState(false)}>
                 <div className='issues-list'>
                     <span><i className={!prop.node.closed? "far fa-dot-circle":"far fa-check-circle"}></i></span>
                     <span className='title'><a href={prop.node?.url} target={'_blank'} rel="noreferrer">{prop.node?.title}</a></span>
