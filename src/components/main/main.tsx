@@ -9,14 +9,13 @@ import Loading from '../loading/loading';
 import IssueHeader from '../issueHeader/issueHeader';
 import Pagination from '../pagination/pagination';
 import { useState } from "react";
-import {IssueHeaderData, PaginationProp, SubHeaderProp} from '../../model/model'
+import {IssueHeaderData, PaginationProp, SubHeaderProp, pagination as dataSize} from '../../model/model'
 
 
 const Main = (prop) => {
 
     const [cursor, setCursor] = useState(null);
     const [state, setState] = useState('CLOSED');
-    // const [state, setState] = useState('CLOSED');
 
     const pagination = (cursor: string ) => {
         setCursor(cursor)
@@ -28,7 +27,7 @@ const Main = (prop) => {
     }
 
 return(
-    <Query query={GET_ISSUES}  variables={{ number: 30, state: state, cursor: cursor}}>
+    <Query query={GET_ISSUES}  variables={{ number: dataSize.PageSize, state: state, cursor: cursor}}>
         {({data, loading}: {data:any, loading:boolean})=>{
             if(loading || !data){
                 return <Loading/>
