@@ -28,7 +28,7 @@ const Main = (prop) => {
     }
 
 return(
-    <Query query={GET_ISSUES}  variables={{ number:30, state: state, cursor: cursor}}>
+    <Query query={GET_ISSUES}  variables={{ number: 30, state: state, cursor: cursor}}>
         {({data, loading}: {data:any, loading:boolean})=>{
             if(loading || !data){
                 return <Loading/>
