@@ -57,7 +57,7 @@ return(
                     <SubHeader count = {subHeaderProp}/>
                     <TopMessage/>
                     <IssueHeader data = {issueHeaderData} />
-                    {repository.issues.edges.map((val: any, index: number) => <IssueList key={index} {...val} index={index} />)}
+                    {repository.issues.edges.map((val: any, index: number) => <IssueList key={index} {...val} index={index + 1} />)}
                     <Pagination action = {paginationProp}/>
                     <Footer/>
                 </div>

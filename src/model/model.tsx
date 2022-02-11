@@ -37,3 +37,7 @@ export interface issueList {
 
     }
 }
+
+export enum pagination {
+    PageSize = 30,
+}
